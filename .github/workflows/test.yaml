@@ -4,7 +4,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'hogehoge'
+      - name: 'echo something'
+        - run: echo 'hogehoge'
       - run: echo 'aaaaa'
       - name: check out repo code
         uses: actions/checkout@v1
