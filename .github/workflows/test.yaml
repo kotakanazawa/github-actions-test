@@ -1,15 +1,8 @@
 name: Hello, world!
 on: push
-
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Hello, world!
-      - uses: actions/checkout@v1
-      - run: cat sample.txt
-
-      - name: hogehoge
-      - uses: actions/checkout@v1
       - run: echo 'hogehoge'
+      - run: echo 'aaaaa'
