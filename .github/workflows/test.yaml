@@ -3,18 +3,12 @@ on: push
 
 jobs:
   build:
-    name: Check contens of the sample text
     runs-on: ubuntu-latest
+
     steps:
+      - name: Hello, world!
       - uses: actions/checkout@v1
       - run: cat sample.txt
 
-name: Hoge
-on: push
-
-jobs:
-  build:
-    name: some test
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo 'hoge hoge'
+      - name: hogehoge
+      - run: echo 'hogehoge'
