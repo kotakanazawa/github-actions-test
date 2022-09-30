@@ -8,3 +8,13 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - run: cat sample.txt
+
+name: Hoge
+on: push
+
+jobs:
+  build:
+    name: some test
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'hoge hoge'
