@@ -3,7 +3,8 @@ on: push
 
 jobs:
   build:
-    name: Greeting
+    name: Check contens of the sample text
     runs-on: ubuntu-latest
     steps:
-      - run: echo 'hello, world'
+      - uses: actions/checkout@v1
+      - run: cat sample.txt
