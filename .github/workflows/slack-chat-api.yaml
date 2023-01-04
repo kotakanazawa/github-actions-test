@@ -19,11 +19,13 @@ jobs:
           payload: |
             {
               "text": "aaaa",
-              "attachments": [
+              "blocks": [
                 {
-                  "color": "good",
-                  "author_name": "${{ github.actor }}",
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "GitHub Action build result: ${{ github.event.discussion.html_url }}\n${{ github.event.comment.html_url }}"
+                  }
                 }
-              ],
-
+              ]
             }
