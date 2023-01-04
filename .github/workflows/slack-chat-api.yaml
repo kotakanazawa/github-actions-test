@@ -17,3 +17,10 @@ jobs:
         with:
           channel-id: '#random'
           slack-message: "hogehoge"
+          attachments: |
+            [
+              {
+                "color": "good",
+                "author_name": "${{ github.actor }}",
+              }
+            ]
