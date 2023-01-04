@@ -15,7 +15,7 @@ jobs:
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
         with:
-          channel-id: '#random'
+          channel-id: "#random"
           payload: |
             {
               "text": "aaaa",
@@ -23,7 +23,15 @@ jobs:
                 {
                   "type": "section",
                   "text": {
-                    "text": "GitHub Action build result: ${{ github.event.discussion.html_url }}\n${{ github.event.comment.html_url }}"
+                    "type": "mrkdwn",
+                    "text": "Discussion URL: ${{ github.event.discussion.html_url }}"
+                  }
+                },
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "Comment: ${{ github.event.comment.html_url }}"
                   }
                 }
               ]
