@@ -7,6 +7,7 @@ on:
 jobs:
   discussion_created:
     runs-on: ubuntu-latest
+    if: github.event.discussion && !github.event.comment
     steps:
       - uses: actions/checkout@v2
       - name: Send notification to slack
