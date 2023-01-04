@@ -14,35 +14,11 @@ jobs:
         uses: slackapi/slack-github-action@v1.16.0
         with:
           channel-id: '#random'
-          payload: |
-            {
-              "text": "test comment 1 dayo",
-              "blocks": [
-                {
-                  "color": "good",
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "test comment 1 dayo"
-                  }
-                },
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "test comment 2 dayo"
-                  }
-                },
-                {
-                  "type": "context",
-                  "elements": [
-                    {
-                      "type": "mrkdwn",
-                      "text": "Author: <https://github.com/${{ github.event.sender.login }}|@${{ github.event.sender.login }}>"
-                    }
-                  ]
-                }
-              ]
-            }
+          text: Discussion created.
+          attachments: |
+            [{
+              "color": "good",
+              "author_name": "${{ github.actor }}"
+            }]
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
