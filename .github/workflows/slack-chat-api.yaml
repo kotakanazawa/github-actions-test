@@ -16,4 +16,4 @@ jobs:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
         with:
           channel-id: '#random'
-          text: "hogehoge"
+          slack-message: "hogehoge"
