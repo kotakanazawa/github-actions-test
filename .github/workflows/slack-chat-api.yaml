@@ -17,15 +17,6 @@ jobs:
         with:
           channel-id: '#random'
           payload: |
-            [
-              {
-                "color": "good",
-                "author_name": "${{ github.actor }}",
-                "author_icon": "${{ github.event.sender.avatar_url }}",
-                "fields": [
-                  {
-                    "title": "Commit Message",
-                  }
-                ]
-              }
-            ]
+            {
+              "text": "aaaa"
+            }
