@@ -16,7 +16,7 @@ jobs:
           channel-id: '#random'
           payload: |
             {
-              "text": "test comment dayo",
+              "text": "test comment 1 dayo",
               "blocks": [
                 {
                   "type": "section",
