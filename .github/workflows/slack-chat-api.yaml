@@ -1,31 +1,39 @@
-name: discussion notification
+name: Slack chat.postMessage
 on:
   discussion:
     types: [created]
   discussion_comment:
     types: [created]
 jobs:
-  discussion_created:
+  build:
     runs-on: ubuntu-latest
-    if: github.event.discussion && !github.event.comment
     steps:
       - uses: actions/checkout@v2
-      - name: Send notification to slack
+      - name: Send GitHub Action trigger data to Slack workflow
         id: slack
         uses: slackapi/slack-github-action@v1.16.0
         with:
           channel-id: '#random'
           payload: |
             {
-              "text": "${{ github.event.discussion.title }}\n\n${{ github.event.discussion.html_url }}",
+              "text": "test comment",
               "blocks": [
                 {
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "${{ job.status }}\n\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}"
+                    "text": "test comment"
                   }
                 },
+                {
+                  "type": "context",
+                  "elements": [
+                    {
+                      "type": "mrkdwn",
+                      "text": "Author: <https://github.com/${{ github.event.sender.login }}|@${{ github.event.sender.login }}>"
+                    }
+                  ]
+                }
               ]
             }
         env:
