@@ -18,5 +18,14 @@ jobs:
           channel-id: '#random'
           payload: |
             {
-              "text": "aaaa"
+              "text": "aaaa",
+              "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "GitHub Action build result: ${{ github.event.discussion.html_url }}\n${{ github.event.comment.html_url }}"
+                  }
+                }
+              ]
             }
