@@ -19,6 +19,12 @@ jobs:
           payload: |
             {
               "text": "aaaa",
+              "attachments": [
+                {
+                  "color": "good",
+                  "author_name": "${{ github.actor }}",
+                }
+              ],
               "blocks": [
                 {
                   "type": "section",
