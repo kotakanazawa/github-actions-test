@@ -25,13 +25,5 @@ jobs:
                   "author_name": "${{ github.actor }}",
                 }
               ],
-              "blocks": [
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "GitHub Action build result: ${{ github.event.discussion.html_url }}\n${{ github.event.comment.html_url }}"
-                  }
-                }
-              ]
+
             }
