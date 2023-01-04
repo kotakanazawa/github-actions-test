@@ -15,10 +15,5 @@ jobs:
         with:
           channel-id: '#random'
           text: Discussion created.
-          attachments: |
-            [{
-              "color": "good",
-              "author_name": "${{ github.actor }}"
-            }]
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
