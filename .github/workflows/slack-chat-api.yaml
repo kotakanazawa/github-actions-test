@@ -16,9 +16,9 @@ jobs:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
         with:
           channel-id: "#random"
+          slack-message: "Discussion created."
           payload: |
             {
-              "text": "aaaa",
               "blocks": [
                 {
                   "type": "section",
