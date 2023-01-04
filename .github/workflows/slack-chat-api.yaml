@@ -16,7 +16,7 @@ jobs:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
         with:
           channel-id: '#random'
-          attachments: |
+          payload: |
             [
               {
                 "color": "good",
