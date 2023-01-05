@@ -18,7 +18,7 @@ jobs:
           channel-id: "#random"
           payload: |
             {
-              "text": "通知メッセージ"
+              "text": "通知メッセージ",
               "blocks": [
                 {
                   "type": "section",
