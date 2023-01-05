@@ -28,6 +28,7 @@ jobs:
                 },
                 {
                   "type": "section",
+                  "color": "good",
                   "text": {
                     "type": "mrkdwn",
                     "text": "${{ github.event.comment.html_url }}"
