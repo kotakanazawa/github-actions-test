@@ -18,6 +18,8 @@ jobs:
           channel-id: "#random"
           payload: |
             {
+              "username": "username",
+              "icon_emoji": ":robot_face:"
               "blocks": [
                 {
                   "type": "section",
