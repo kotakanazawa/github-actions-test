@@ -20,7 +20,7 @@ jobs:
             {
               "blocks": [
                 {
-                  "type": "context",
+                  "type": "section",
                   "text": {
                     "type": "mrkdwn",
                     "text": "Comment on discussion by <https://github.com/${{ github.event.sender.login }}| ${{ github.event.sender.login }}>"
