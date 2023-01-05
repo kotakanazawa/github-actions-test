@@ -16,7 +16,6 @@ jobs:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
         with:
           channel-id: "#random"
-          slack-message: "Discussion created."
           payload: |
             {
               "blocks": [
@@ -24,7 +23,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "Discussion URL: ${{ github.event.discussion.html_url }}"
+                    "text": "Discussion URL: ${{ github.event.discussion.title }}"
                   }
                 },
                 {
