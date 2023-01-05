@@ -18,6 +18,7 @@ jobs:
           channel-id: "#random"
           payload: |
             {
+              "text": "通知メッセージ"
               "blocks": [
                 {
                   "type": "section",
@@ -28,7 +29,6 @@ jobs:
                 },
                 {
                   "type": "section",
-                  "color": "good",
                   "text": {
                     "type": "mrkdwn",
                     "text": "${{ github.event.comment.html_url }}"
