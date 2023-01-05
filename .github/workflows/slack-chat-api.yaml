@@ -30,14 +30,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "Discussion URL: ${{ github.event.discussion.title }}"
-                  }
-                },
-                {
-                  "type": "section",
-                  "text": {
-                    "type": "mrkdwn",
-                    "text": "Comment: ${{ github.event.comment.body }}"
+                    "text": "${{ github.event.comment.html_url }}"
                   }
                 }
               ]
