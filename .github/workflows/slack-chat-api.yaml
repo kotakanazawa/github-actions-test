@@ -31,6 +31,7 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
+                    "parse": "full"
                     "text": "${{ github.event.comment.html_url }}"
                   }
                 }
