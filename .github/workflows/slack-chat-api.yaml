@@ -5,7 +5,7 @@ on:
   discussion_comment:
     types: [created]
 jobs:
-  build:
+  discussion_commented:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -19,6 +19,13 @@ jobs:
           payload: |
             {
               "blocks": [
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "Comment on discussion by <https://github.com/${{ github.event.sender.login }}|@${{ github.event.sender.login }}>"
+                  }
+                },
                 {
                   "type": "section",
                   "text": {
