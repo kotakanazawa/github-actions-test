@@ -18,7 +18,7 @@ jobs:
           channel-id: "#random"
           payload: |
             {
-              "text": "通知メッセージ",
+              "text": "ディスカッションにコメント来たで!",
               "blocks": [
                 {
                   "type": "section",
