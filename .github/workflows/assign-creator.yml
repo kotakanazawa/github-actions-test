@@ -16,7 +16,7 @@ jobs:
     steps:
       - run: gh pr edit "$PULL_NUMBER" --repo "$RESPOSITORY" --add-assignee "$CREATOR"
         env:
-          GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
           REPOSITORY: ${{ github.repository }}
           PULL_NUMBER: ${{ github.event.pull_request.number }}
           CREATOR: ${{ github.event.pull_request.user.login }}
