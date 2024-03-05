@@ -1,0 +1,22 @@
+name: Assign creator
+
+on:
+  pull_request:
+    types: [opened]
+
+permissions:
+  pull-requests: write
+  repository-projects: read
+
+jobs:
+  assign:
+    if: ${{ toJson(github.event.pull_request.assignees) == '[]' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 1
+    steps:
+      - run: gh pr edit "$PULL_NUMBER" --repo "$RESPOSITORY" --add-assignee "$CREATOR"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          PULL_NUMBER: ${{ github.event.pull_request.number }}
+          CREATOR: ${{ github.event.pull_request.user.login }}
